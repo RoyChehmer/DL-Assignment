@@ -2,19 +2,21 @@
 ### Description
  - Assigment public repository for DM-interview-assignment
  ---
- # 🇮🇱 Israeli Street Names Importer
+ # Israeli Street Names Importer
 This project fetches street names for cities in Israel and inserts them into a database using a queueing platform.
-Objective
+
 The goal of this assignment is to:
 - Fetch street name data from an external API.
 - Use a queueing platform (e.g., RabbitMQ, Kafka) to handle the data flow.
 - Insert the street data into a database using a consumer.
+
 Tech Stack
 - **Node.js** `16.x`
 - **npm** `8.x`
 - **TypeScript** `4.x`
-- **Queueing Platform**: Your choice (e.g., RabbitMQ, Kafka)
-- **Database**: Your choice (e.g., PostgreSQL, MongoDB, MySQL)
+- **Queueing Platform**: RabbitMQ
+- **Database**: PostgreSQL
+  
 Project Structure
 - `StreetsService.ts`: Service for fetching street names via API.
 - `cities.ts`: Contains a list of Israeli cities to process.
