@@ -3,7 +3,7 @@ This project fetches street names for cities in Israel and inserts them into a P
 
 ## Goals
 - Fetch street name data from an external API.
-- Use a queueing platform (e.g., RabbitMQ) to handle the data flow.
+- Use a queueing platform to handle the data flow.
 - Insert the street data into a database using a single consumer.
 
 ## Tech Stack
