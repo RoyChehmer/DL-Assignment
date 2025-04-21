@@ -1,6 +1,6 @@
-# **data-managment-interview**
+# **DM-interview-assignment**
 ### Description
- - Public repository with the data management team's technichal interview assignment inside  
+ - Assigment public repository for DM-interview-assignment
  ---
  ## Assignment specification:
 Your assignment is to insert data about street names in israel to a database, using some kind of a queueing platform.\
