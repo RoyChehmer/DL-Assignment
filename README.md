@@ -2,13 +2,36 @@
 ### Description
  - Assigment public repository for DM-interview-assignment
  ---
- ## Assignment specification:
-Your assignment is to insert data about street names in israel to a database, using some kind of a queueing platform.\
-The assignment is to be done in nodejs + Typescript (node version 16.X, npm version 8.X, typescript version 4.X).\
-Inside of the repository you will find a StreetsService class which provides you the data from the api.\
-The list of cities is provided inside of the cities.ts file.\
-Feel free to make changes to the StreetsService class if you feel they are necessary.
- - If you want to take a look at the raw data - https://data.gov.il/dataset/israel-streets-synom/resource/1b14e41c-85b3-4c21-bdce-9fe48185ffca
+ # 🇮🇱 Israeli Street Names Importer
+This project fetches street names for cities in Israel and inserts them into a database using a queueing platform.
+Objective
+The goal of this assignment is to:
+- Fetch street name data from an external API.
+- Use a queueing platform (e.g., RabbitMQ, Kafka) to handle the data flow.
+- Insert the street data into a database using a consumer.
+Tech Stack
+- **Node.js** `16.x`
+- **npm** `8.x`
+- **TypeScript** `4.x`
+- **Queueing Platform**: Your choice (e.g., RabbitMQ, Kafka)
+- **Database**: Your choice (e.g., PostgreSQL, MongoDB, MySQL)
+Project Structure
+- `StreetsService.ts`: Service for fetching street names via API.
+- `cities.ts`: Contains a list of Israeli cities to process.
+- `producer.ts`: Reads cities, fetches street data, and pushes to the queue.
+- `consumer.ts`: Listens to the queue and inserts street data into the database.
+
+
+
+
+Feel free to modify the `StreetsService` class as needed to fit the flow.
+
+## 🚀 Getting Started
+
+1. **Install dependencies**  
+   ```bash
+   npm install
+
 
 To complete the assignment you will need to select a database, sql or no-sql (for example: mongo, singlestore) and a queueing service (for example - rabbitmq, kafka), either from the provided dependencies, or one of your choice (commit it to your solution if you chose a different one).\
 You will need to create two services:
