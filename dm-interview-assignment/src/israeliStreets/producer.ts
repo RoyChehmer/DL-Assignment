@@ -16,7 +16,7 @@ const run = async () => {
 	console.log(`Get streets for city named: "${cityName}"`)
 
 	// searching city from the cities object
-	const matchedCity = Object.entries(cities).find(([_, value]) => value === cityName)	
+	const matchedCity = Object.entries(cities).find(([_, value]) => value.trim() === cityName.trim())	
 	if (!matchedCity) {
 		console.error(`Error: City "${cityName}" not found in the cities list.`)
 		process.exit(1)
