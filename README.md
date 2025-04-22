@@ -7,8 +7,8 @@ This project fetches street names for cities in Israel and inserts them into a P
 - Insert the street data into a database using a single consumer.
 
 ## Tech Stack
-- **Queueing Platform:** RabbitMQ – simple FIFO queue with a single consumer.
-- **Database:** PostgreSQL – relational database with a small and simple schema to store street references.
+- **Queueing Platform:** RabbitMQ – simple FIFO queue with a single consumer. (User: guest ,Pass: guest)
+- **Database:** PostgreSQL – relational database with a small and simple schema to store street references. (User: user ,Pass: password, DB: DataLoop)
 
 ## Project Structure
 - `StreetsService.ts`: Fetches street names via API, handles queue publishing/consuming, and manages table creation.
