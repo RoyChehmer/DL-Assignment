@@ -1,5 +1,5 @@
 # Israeli Street Names Importer
-This project fetches street names for cities in Israel and inserts them into a PostgreSQL database using a queueing platform.
+This project fetches street names for cities in Israel and inserts them into a database using a queueing platform.
 
 ## Goals
 - Fetch street name data from an external API.
