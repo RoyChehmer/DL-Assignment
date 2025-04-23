@@ -30,7 +30,7 @@ This project fetches street names for cities in Israel and inserts them into a d
 - Consumer is running in  background -> pulls messages from RabbitMQ -> saves the details in PostgreSQL DB.
 
 ## ERD 
-Streets N-1 Cities N-1 regions
+Streets N-1 Cities N-1 Regions
 
 ## How to create the infrastructure and execute the project
 cd DataLoopaAssesment\dm-interview-assignment
