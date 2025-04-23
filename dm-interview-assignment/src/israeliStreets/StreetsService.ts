@@ -141,6 +141,7 @@ export class StreetsService{
 
 		  console.log(`Listening to queue: ${QUEUE_NAME}`);		  
 	  
+		  // kepping the script alive, setup asynchronous listener
 		  channel.consume(QUEUE_NAME, async (msg) => {
 			if (msg !== null) {
 
