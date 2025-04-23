@@ -22,4 +22,9 @@ This project fetches street names for cities in Israel and inserts them into a d
 - Since the data contains **multiple entities** (e.g., cities and streets) with important relationships, it is **separated into distinct database tables**.
 - Street data is stored in **normalized tables**, structured according to their **business context** (e.g., `cities`, `streets`).
 - The **producer** is responsible for managing `city_name` and triggering the street-fetching process.
-- The **consumer** runs in the background, listening to the queue and saving new street data as messages arrive.
+- The **consumer** is asynchronous listener which keep the script alive, listening to the queue and saving new street data while the messages arrive.
+
+Diagram:
+Publisher -> retrive detailed streets by name -> pushing to RabbitMQ.
+Consumer is running in  background -> pulls messages from RabbitMQ -> saves the details in PostgreSQL DB.
+
