@@ -30,8 +30,9 @@ Publisher -> retrive detailed streets by name -> pushing to RabbitMQ.
 Consumer is running in  background -> pulls messages from RabbitMQ -> saves the details in PostgreSQL DB.
 
 ## How to create the infrastructure and execute the project
-cd run deploy.bat on folder DataLoopaAssesment
-run consumer by: npm run consumer 
-run producer by: npm run producer "אשדוד" 
+cd DataLoopaAssesment\dm-interview-assignment
+execute deploy.bat
+execute consumer by: npm run consumer 
+execute producer by: npm run producer "אשדוד" 
 
 
