@@ -23,8 +23,15 @@ This project fetches street names for cities in Israel and inserts them into a d
 - Street data is stored in **normalized tables**, structured according to their **business context** (e.g., `cities`, `streets`).
 - The **producer** is responsible for managing `city_name` and triggering the street-fetching process.
 - The **consumer** is asynchronous listener which keep the script alive, listening to the queue and saving new street data while the messages arrive.
+- The number of street records fetched per city is limited to 10, but this can be adjusted as needed.
 
-Diagram:
+## Diagram: 
 Publisher -> retrive detailed streets by name -> pushing to RabbitMQ.
 Consumer is running in  background -> pulls messages from RabbitMQ -> saves the details in PostgreSQL DB.
+
+## How to deploy
+cd run deploy.bat on folder DataLoopaAssesment
+run consumer by: npm run consumer 
+run producer by: npm run producer "אשדוד" 
+
 
