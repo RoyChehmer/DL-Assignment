@@ -26,8 +26,8 @@ This project fetches street names for cities in Israel and inserts them into a d
 - The number of street records fetched per city is limited to 10, but this can be adjusted as needed.
 
 ## Diagram: 
-Publisher -> retrive detailed streets by name -> pushing to RabbitMQ.
-Consumer is running in  background -> pulls messages from RabbitMQ -> saves the details in PostgreSQL DB.
+- Publisher -> retrive detailed streets by name -> pushing to RabbitMQ.
+- Consumer is running in  background -> pulls messages from RabbitMQ -> saves the details in PostgreSQL DB.
 
 ## How to create the infrastructure and execute the project
 cd DataLoopaAssesment\dm-interview-assignment
