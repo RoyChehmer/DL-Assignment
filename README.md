@@ -25,9 +25,12 @@ This project fetches street names for cities in Israel and inserts them into a d
 - The **consumer** is asynchronous listener which keep the script alive, listening to the queue and saving new street data while the messages arrive.
 - The number of street records fetched per city is limited to 10, but this can be adjusted as needed.
 
-## Diagram: 
+## Diagrams: 
 - Publisher -> retrive detailed streets by name -> pushing to RabbitMQ.
 - Consumer is running in  background -> pulls messages from RabbitMQ -> saves the details in PostgreSQL DB.
+
+## ERD 
+Streets N-1 Cities N-1 regions
 
 ## How to create the infrastructure and execute the project
 cd DataLoopaAssesment\dm-interview-assignment
