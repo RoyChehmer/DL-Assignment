@@ -24,6 +24,7 @@ This project fetches street names for cities in Israel and inserts them into a d
 - The **producer** is responsible for managing `city_name` and triggering the street-fetching process.
 - The **consumer** is asynchronous listener which keep the script alive, listening to the queue and saving new street data while the messages arrive.
 - The number of street records fetched per city is limited to 10, but this can be adjusted as needed.
+- any existing record that will be push the DB will update the record, only new records will be added.
 
 ## Diagrams
 - Publisher -> retrives by cli cuty name and pulls the related detailed streets -> pushs the details to RabbitMQ.
