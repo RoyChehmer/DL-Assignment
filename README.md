@@ -35,7 +35,7 @@ Streets N-1 Cities N-1 Regions
 Description: Each streets Entity have a city and each city belongs to one region
 Due to the number of the records and the relationships between the entities, we dont need NoSql or Big Data DB, we can afford without any concerns to store the data in Relationship DB.
 
-## Instruction - How to create the infrastructure and execute the project
+## Instructions - How to create the infrastructure and execute the project
 - clone the project to local machine or download the Zip file
 - cd DataLoopaAssesment\dm-interview-assignment
 - execute deploy.bat
