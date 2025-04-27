@@ -25,7 +25,7 @@ This project fetches street names for cities in Israel and inserts them into a d
 - The **consumer** is asynchronous listener which keep the script alive, listening to the queue and saving new street data while the messages arrive.
 - The number of street records fetched per city is limited to 10, but this can be adjusted as needed.
 
-## Diagrams: 
+## Diagrams
 - Publisher -> retrives by cli cuty name and pulls the related detailed streets -> pushs the details to RabbitMQ.
 - Consumer -> runs in background -> pulls messages from RabbitMQ -> saves the details in PostgreSQL DB.
 
@@ -35,10 +35,8 @@ Description: Each streets Entity have a city and each city belongs to one region
 Due to the number of the records and the relationships between the entities, we dont need NoSql or Big Data DB, we can afford without any concerns to store the data in Relationship DB.
 
 ## Instruction - How to create the infrastructure and execute the project
-clone the project to local machine
-cd DataLoopaAssesment\dm-interview-assignment
-execute deploy.bat
-execute consumer by: npm run consumer 
-execute producer by: npm run producer "אשדוד" (for example)
-
-
+- clone the project to local machine
+- cd DataLoopaAssesment\dm-interview-assignment
+- execute deploy.bat
+- execute consumer by: npm run consumer 
+- execute producer by: npm run producer "אשדוד" (for example)
