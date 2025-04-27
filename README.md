@@ -1,4 +1,4 @@
-# Israeli Street Names Importer
+# Israeli Street Names Importer - by Roy Chehmer
 This project fetches street names for cities in Israel and inserts them into a database using a queueing platform.
 
 ## Goals
@@ -26,16 +26,19 @@ This project fetches street names for cities in Israel and inserts them into a d
 - The number of street records fetched per city is limited to 10, but this can be adjusted as needed.
 
 ## Diagrams: 
-- Publisher -> retrive detailed streets by name -> pushing to RabbitMQ.
-- Consumer is running in  background -> pulls messages from RabbitMQ -> saves the details in PostgreSQL DB.
+- Publisher -> retrives by cli cuty name and pulls the related detailed streets -> pushs the details to RabbitMQ.
+- Consumer -> runs in background -> pulls messages from RabbitMQ -> saves the details in PostgreSQL DB.
 
 ## ERD 
 Streets N-1 Cities N-1 Regions
+Description: Each streets Entity have a city and each city belongs to one region
+Due to the number of the records and the relationships between the entities, we dont need NoSql or Big Data DB, we can afford without any concerns to store the data in Relationship DB.
 
-## How to create the infrastructure and execute the project
+## Instruction - How to create the infrastructure and execute the project
+clone the project to local machine
 cd DataLoopaAssesment\dm-interview-assignment
 execute deploy.bat
 execute consumer by: npm run consumer 
-execute producer by: npm run producer "אשדוד" 
+execute producer by: npm run producer "אשדוד" (for example)
 
 
